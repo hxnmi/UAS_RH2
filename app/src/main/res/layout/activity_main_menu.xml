@@ -50,5 +50,16 @@
         android:textColor="@color/light_blue_1"
         android:textSize="30sp"
         android:onClick="toTables"/>
+    <Button
+        android:layout_width="275dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/main_menu_option_bar_1"
+        android:fontFamily="@font/heavyheap"
+        android:gravity="center"
+        android:text="About Dev"
+        android:textColor="@color/light_blue_1"
+        android:textSize="30sp" />
 
 </LinearLayout>
