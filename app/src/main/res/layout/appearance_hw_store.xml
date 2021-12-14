@@ -40,19 +40,20 @@
         android:text="Example"
         android:textColor="@color/black"
         android:textSize="20sp" />
+
     <Button
         android:id="@+id/buy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Beli"
-        android:background="@drawable/hw_store_button"
-        android:fontFamily="@font/heavyheap"
-        android:textColor="@color/red2"
-        android:textSize="24sp"
         android:layout_below="@id/imageIcon"
         android:layout_marginHorizontal="10dp"
         android:layout_marginBottom="5dp"
-        android:onClick="beli"/>
+        android:background="@drawable/hw_store_button"
+        android:fontFamily="@font/heavyheap"
+        android:onClick="beli"
+        android:text="Beli"
+        android:textColor="@color/light_blue_1"
+        android:textSize="24sp" />
 
 
 </RelativeLayout>
