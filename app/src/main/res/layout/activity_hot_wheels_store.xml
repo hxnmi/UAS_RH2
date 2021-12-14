@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:background="@drawable/background_opacity"
+    android:orientation="vertical"
+    tools:context=".hot_wheels_store">
+  <TextView
+      android:id="@+id/hotwheelsstoretitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:text="Hot Wheels Store"
+    android:textSize="24sp"
+    android:textColor="@color/light_blue_1"
+    android:background="@drawable/main_menu_option_bar_1"
+    android:textAlignment="center"
+    android:layout_marginHorizontal="50dp"
+    android:fontFamily="@font/heavyheap"
+    android:paddingVertical="15dp"
+    app:layout_constraintTop_toTopOf="parent"/>
+<androidx.recyclerview.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="585dp"
+    app:layout_constraintTop_toBottomOf="@id/hotwheelsstoretitle"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:id="@+id/HotWheelsStore">
+
+  </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

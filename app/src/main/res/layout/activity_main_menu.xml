@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_opacity"
+    tools:context=".main_menu">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOTWHEELS\nRETAIL's HUB"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textSize="65sp"
+        android:layout_above="@+id/EditEmail"
+        android:shadowColor="@color/red2"
+        android:shadowRadius="20"
+        android:fontFamily="@font/heavyheap"
+        android:textColor="@color/red"
+        android:paddingBottom="25sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"/>
+    <Button
+        android:layout_width="275dp"
+        android:layout_height="75dp"
+        android:text="Hot Wheels Store"
+        android:textSize="30sp"
+        android:background="@drawable/main_menu_option_bar_1"
+        android:fontFamily="@font/heavyheap"
+        android:textColor="@color/light_blue_1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="75dp"
+        android:onClick="toHWStore"
+        />
+
+    <Button
+        android:layout_width="275dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/main_menu_option_bar_1"
+        android:fontFamily="@font/heavyheap"
+        android:gravity="center"
+        android:text="Tips for Collectors"
+        android:textColor="@color/light_blue_1"
+        android:textSize="30sp"
+        android:onClick="toTables"/>
+
+</LinearLayout>

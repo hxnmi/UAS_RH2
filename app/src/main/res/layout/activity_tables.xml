@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_opacity"
+    tools:context=".tables">
+    <TableLayout>
+        <TableRow
+            android:gravity="center">
+            <TextView
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="25dp"
+                android:text="Tips for Collectors"
+                android:paddingHorizontal="20dp"
+                android:fontFamily="@font/heavyheap"
+                android:textColor="@color/red3"
+                android:background="@drawable/main_menu_option_bar_1"
+                android:textSize="30sp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"/>
+        </TableRow>
+    </TableLayout>
+    <TableRow>
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_width="50dp"
+            android:text="1"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:background="@drawable/tables_red_opacity"/>
+
+        <TextView
+            android:layout_width="315dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/tables_red_opacity"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Nah, ini lah tips pertama yang harus Anda lakukan ketika akan membeli Hotwheels. Sebelum membawa pulang mobil mainan untuk Anda atau buah hati, pastikan Anda memilih merek asli bukan Hotwheels yang palsu. Untuk itu, Anda harus sangat teliti dalam melihat logo dan tulisan merek yang tertera pada bungkus atau kardus Hotwheels. Tentunya Anda tidak ingin tertipu oleh merek yang palsu bukan?"
+            android:justificationMode="inter_word"
+            android:paddingHorizontal="10dp"
+            android:textSize="14sp" />
+
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:text="2"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:background="@drawable/tables_red_opacity"/>
+
+        <TextView
+            android:layout_width="315dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:background="@drawable/tables_red_opacity"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Langkah ke dua cara memilih Hotwheels yang bagus untuk Anda lakukan ialah melihat jenis bahan yang digunakan untuk mainan yang akan Anda beli. Kadang kala ada jenis mainan yang menggunakan beberapa bahan yang kurang bagus, sehingga pemakaian tidak akan lama. Nah, untuk Hotwheels Anda tidak perlu khawatir. Hotwheel sendiri terbuat dari bahan yang sangat bagus dan cukup keras missal aluminium dan besi. Sehingga Hotwheels akan tahan banting jika Anda tidak sengaja menjatuhkannya. Jadi pastikan Anda tidak salah pilih yaa."
+            android:justificationMode="inter_word"
+            android:paddingHorizontal="10dp"
+            android:textSize="12sp" />
+
+
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:layout_width="50dp"
+            android:text="3"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:background="@drawable/tables_red_opacity"/>
+
+        <TextView
+            android:layout_width="315dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:background="@drawable/tables_red_opacity"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Tips ke tiga yaitu melihat harga yang ditawarkan untuk mainan mobil Hotwheels. Dengan harga bisa Anda jadikan sebagai salah satu cara memilih Hotwheels yang bagus. Harga tentu saja bisa dijadikan patokan untuk menentukan Hotwheels itu asli atau palsu. Hal ini harus diketahui supaya Anda benar-benar paham bahwa mainan yang Anda beli memiliki merek yang benar atau tidak. Jangan sampai Anda tidak teliti dalam melihat harga yang ditawarkan ya."
+            android:justificationMode="inter_word"
+            android:paddingHorizontal="10dp"
+            android:textSize="12sp" />
+
+
+    </TableRow>
+
+
+
+
+</TableLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_blue_1"
+    tools:context=".get_started">
+
+    <ImageView
+        android:id="@+id/BackgroundHotWheels"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_hotwheels"
+        android:scaleType="fitXY"
+        android:onClick="tapAnywhere"
+        android:alpha="0.5" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="HOTWHEELS\nRETAIL's HUB"
+        android:gravity="center"
+        android:textSize="65sp"
+        android:shadowColor="@color/light_blue_3"
+        android:shadowRadius="75"
+        android:fontFamily="@font/heavyheap"
+        android:textColor="@color/white"
+        android:paddingBottom="0sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="TAP ANYWHERE!"
+        android:gravity="center"
+        android:paddingTop="400dp"
+        android:textSize="40dp"
+        android:fontFamily="@font/heavyheap"
+        android:textColor="@color/red"
+        android:shadowColor="@color/red"
+        android:shadowRadius="55" />
+
+</FrameLayout>
