@@ -20,16 +20,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOTWHEELS\nRETAIL's HUB"
-        android:layout_centerInParent="true"
-        android:textAlignment="center"
-        android:textSize="55sp"
         android:layout_above="@+id/EditEmail"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/heavyheap"
+        android:paddingBottom="25sp"
         android:shadowColor="@color/light_blue_3"
         android:shadowRadius="75"
-        android:fontFamily="@font/heavyheap"
-        android:textColor="@color/white"
-        android:paddingBottom="25sp"/>
+        android:text="HOTWHEELS\nRETAIL's HUB"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="65sp" />
     <EditText
         android:id="@+id/EditEmail"
         android:layout_width="match_parent"
