@@ -23,7 +23,7 @@
         android:text="HOTWHEELS\nRETAIL's HUB"
         android:layout_centerInParent="true"
         android:textAlignment="center"
-        android:textSize="65sp"
+        android:textSize="55sp"
         android:layout_above="@+id/EditEmail"
         android:shadowColor="@color/light_blue_3"
         android:shadowRadius="75"
