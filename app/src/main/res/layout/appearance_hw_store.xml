@@ -11,15 +11,18 @@
         android:id="@+id/imageIcon"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:scaleType="fitXY"
-        android:layout_margin="10dp"
         android:src="@drawable/ic_launcher_background" />
 
     <TextView
-        android:layout_marginTop="13dp"
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
         android:layout_toRightOf="@id/imageIcon"
         android:fontFamily="@font/montserrat_semi_bold"
         android:gravity="left"
@@ -32,21 +35,20 @@
         android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imageIcon"
         android:layout_below="@id/title"
-        android:textAlignment="textEnd"
+        android:layout_toRightOf="@id/imageIcon"
         android:fontFamily="@font/montserrat_semi_bold"
         android:paddingHorizontal="25dp"
         android:text="Example"
+        android:textAlignment="textEnd"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
     <Button
         android:id="@+id/info_hw"
-        android:layout_width="match_parent"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageIcon"
-        android:layout_marginRight="200dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/hw_store_button"
@@ -55,20 +57,20 @@
         android:textColor="@color/light_blue_1"
         android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/buy"
+    <EditText
+        android:id="@+id/jumlahBeli"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageIcon"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/hw_store_button"
-        android:fontFamily="@font/heavyheap"
-        android:onClick="beli"
-        android:text="Beli"
+        android:layout_marginHorizontal="60dp"
+        android:layout_toRightOf="@id/info_hw"
+        android:background="@drawable/bg_jumlahbeli"
+        android:inputType="number"
+        android:paddingVertical="7dp"
+        android:hint="0"
+        android:textAlignment="center"
         android:textColor="@color/light_blue_1"
-        android:textSize="24sp" />
+        android:textSize="24dp" />
 
 
 </RelativeLayout>
