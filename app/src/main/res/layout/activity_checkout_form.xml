@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_opacity"
+    tools:context=".checkout_form">
+    <TextView
+        android:id="@+id/checkOutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckOut!"
+        android:background="@drawable/hw_store_button"
+        android:textColor="@color/light_blue_1"
+        android:textAlignment="center"
+        android:fontFamily="@font/heavyheap"
+        android:textSize="35sp"
+        android:paddingVertical="10sp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/totalTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total :"
+        android:textColor="@color/red"
+        android:textAlignment="textStart"
+        android:fontFamily="@font/heavyheap"
+        android:textSize="35sp"
+        android:shadowColor="@color/light_blue_1"
+        android:shadowRadius="10"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="10sp"
+        app:layout_constraintTop_toBottomOf="@id/checkOutTitle"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="200dp"/>
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="price"
+        android:textColor="@color/red"
+        android:textAlignment="textEnd"
+        android:fontFamily="@font/heavyheap"
+        android:textSize="35sp"
+        android:shadowColor="@color/white"
+        android:shadowRadius="10"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="10sp"
+
+        app:layout_constraintLeft_toRightOf="@id/totalTitle"
+        app:layout_constraintTop_toBottomOf="@id/checkOutTitle"
+
+
+        />
+
+    <EditText
+        android:id="@+id/editAddresss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="40sp"
+        android:layout_marginBottom="20dp"
+        android:width="315dp"
+        android:background="@drawable/edit_text"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:hint="Destination Address"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/totalTitle"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
