@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +32,9 @@ public class hot_wheels_store extends AppCompatActivity {
         hwlist.setAdapter(new Adapter(Hw_List,Hw_Price, images));
 
     }
-    public void beli(View view){
-        Toast.makeText(this, "Maaf, barang sudah habis.", Toast.LENGTH_SHORT).show();
+    public void toCheckOut(View view){
+        Intent i = new Intent(hot_wheels_store.this,checkout_form.class);
+        startActivity(i);
     }
+
 }
