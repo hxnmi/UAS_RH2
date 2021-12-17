@@ -62,7 +62,6 @@
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="40sp"
         android:layout_marginBottom="20dp"
-        android:width="315dp"
         android:background="@drawable/edit_text"
         android:drawableStart="@drawable/ic_baseline_location_on_24"
         android:fontFamily="@font/montserrat_semi_bold"
