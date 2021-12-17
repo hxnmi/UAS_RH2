@@ -71,17 +71,31 @@
         android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@id/totalTitle"
         android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="↓Choose Expedition↓"
+        app:layout_constraintTop_toBottomOf="@id/editAddresss"
+        android:textAlignment="center"
+        android:fontFamily="@font/heavyheap"
+        android:textSize="35sp"
+        android:textColor="@color/red"/>
+
 
     <RadioButton
         android:id="@+id/checkListPosIndonesia"
+        android:background="@drawable/radio_btn_red"
         android:layout_width="wrap_content"
+        app:layout_constraintRight_toLeftOf="@+id/gambarPosIndonesia"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
-        android:background="@drawable/radio_btn_red"
+
         app:layout_constraintTop_toBottomOf="@id/editAddresss"
-        tools:layout_editor_absoluteX="40dp" />
+        />
 
     <ImageView
+        android:id="@+id/gambarPosIndonesia"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:background="@drawable/logo_pos_indonesia"
