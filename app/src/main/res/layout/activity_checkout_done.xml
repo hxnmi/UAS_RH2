@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_1"
+    android:orientation="horizontal"
+    tools:context=".checkout_done">
+
+    <ImageView
+        android:id="@+id/SuccessfulResettingPasswordImage"
+        android:layout_width="156dp"
+        android:layout_height="136dp"
+        android:layout_marginBottom="75dp"
+        android:src="@drawable/ic_baseline_check_box_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Congratulation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/heavyheap"
+        android:text="Congratulation, You're Successfully Ordering Items!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/SuccessfulResettingPasswordImage" />
+
+    <Button
+        android:id="@+id/ConfrimButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/light_blue_2_button"
+        android:fontFamily="@font/heavyheap"
+        android:onClick="backToLogin"
+        android:text="back!"
+        android:textColor="@color/red"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@id/Congratulation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

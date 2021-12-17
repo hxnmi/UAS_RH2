@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.43UG_A11202012434_MICHAELINDRAWAN_UTSPPB">
         <activity
+            android:name=".checkout_done"
+            android:exported="false" />
+        <activity
             android:name=".checkout_form"
             android:exported="false" />
         <activity

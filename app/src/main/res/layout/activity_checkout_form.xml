@@ -5,49 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_opacity"
+    android:orientation="horizontal"
     tools:context=".checkout_form">
+
     <TextView
         android:id="@+id/checkOutTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CheckOut!"
         android:background="@drawable/hw_store_button"
-        android:textColor="@color/light_blue_1"
-        android:textAlignment="center"
         android:fontFamily="@font/heavyheap"
-        android:textSize="35sp"
         android:paddingVertical="10sp"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        android:text="CheckOut!"
+        android:textAlignment="center"
+        android:textColor="@color/light_blue_1"
+        android:textSize="35sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/totalTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Total :"
-        android:textColor="@color/red"
-        android:textAlignment="textStart"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="200dp"
         android:fontFamily="@font/heavyheap"
-        android:textSize="35sp"
+        android:paddingVertical="10sp"
         android:shadowColor="@color/light_blue_1"
         android:shadowRadius="10"
-        android:layout_marginTop="20dp"
-        android:paddingVertical="10sp"
-        app:layout_constraintTop_toBottomOf="@id/checkOutTitle"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="200dp"/>
+        android:text="Total :"
+        android:textAlignment="textStart"
+        android:textColor="@color/red"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@id/checkOutTitle" />
+
     <TextView
         android:id="@+id/totalPrice"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="price"
-        android:textColor="@color/red"
-        android:textAlignment="textEnd"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/heavyheap"
-        android:textSize="35sp"
+        android:paddingVertical="10sp"
         android:shadowColor="@color/white"
         android:shadowRadius="10"
-        android:layout_marginTop="20dp"
-        android:paddingVertical="10sp"
+        android:text="price"
+        android:textAlignment="textEnd"
+        android:textColor="@color/red"
+        android:textSize="35sp"
 
         app:layout_constraintLeft_toRightOf="@id/totalTitle"
         app:layout_constraintTop_toBottomOf="@id/checkOutTitle"
@@ -57,55 +60,105 @@
 
     <EditText
         android:id="@+id/editAddresss"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_marginHorizontal="40sp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/edit_text"
         android:drawableStart="@drawable/ic_baseline_location_on_24"
         android:fontFamily="@font/montserrat_semi_bold"
         android:hint="Destination Address"
         android:inputType="text"
+        android:minHeight="48dp"
         android:paddingLeft="10dp"
         android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@id/totalTitle"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalTitle" />
+
     <TextView
-        android:layout_marginTop="15dp"
+        android:id="@+id/chooseExpeditionTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="↓Choose Expedition↓"
-        app:layout_constraintTop_toBottomOf="@id/editAddresss"
-        android:textAlignment="center"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/heavyheap"
+        android:shadowColor="@color/white"
+        android:shadowRadius="10"
+        android:text="↓Choose Expedition↓"
+        android:textAlignment="center"
+        android:textColor="@color/red"
         android:textSize="35sp"
-        android:textColor="@color/red"/>
+        app:layout_constraintTop_toBottomOf="@id/editAddresss" />
 
-
-    <RadioButton
-        android:id="@+id/checkListPosIndonesia"
-        android:background="@drawable/radio_btn_red"
+    <RadioGroup
+        android:id="@+id/radioGroup1"
         android:layout_width="wrap_content"
-        app:layout_constraintRight_toLeftOf="@+id/gambarPosIndonesia"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/chooseExpeditionTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
-        app:layout_constraintTop_toBottomOf="@id/editAddresss"
-        />
+        <RadioButton
+            android:id="@+id/checklistPosIrlandia"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radio_btn_blue"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:padding="8dp"
+            android:shadowColor="@color/white"
+            android:shadowRadius="10"
+            android:text="POS IRLANDIA"
+            android:textColor="@color/red"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/chooseExpeditionTitle" />
 
-    <ImageView
-        android:id="@+id/gambarPosIndonesia"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:background="@drawable/logo_pos_indonesia"
+        <RadioButton
+            android:id="@+id/checklistTUKI"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radio_btn_blue"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:padding="8dp"
+            android:shadowColor="@color/white"
+            android:shadowRadius="10"
+            android:text="TUKI"
+            android:textColor="@color/red"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/chooseExpeditionTitle" />
 
-        app:layout_constraintLeft_toRightOf="@id/checkListPosIndonesia"
-        app:layout_constraintRight_toRightOf="parent"
+        <RadioButton
+            android:id="@+id/checklistJnJ"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/radio_btn_blue"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:padding="8dp"
+            android:shadowColor="@color/white"
+            android:shadowRadius="10"
+            android:text="JnJ"
+            android:textColor="@color/red"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/chooseExpeditionTitle" />
+    </RadioGroup>
 
- app:layout_constraintLeft_toLeftOf="parent"       app:layout_constraintTop_toBottomOf="@id/editAddresss"
-        android:layout_marginTop="80dp"
-        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="90dp"
+        android:background="@drawable/hw_store_button"
+        android:fontFamily="@font/heavyheap"
+        android:text="Order!"
+        android:textColor="@color/light_blue_1"
+        android:textSize="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
