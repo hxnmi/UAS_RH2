@@ -66,9 +66,10 @@
         android:layout_marginHorizontal="60dp"
         android:layout_toRightOf="@id/info_hw"
         android:background="@drawable/bg_jumlahbeli"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:hint="0"
         android:inputType="number"
         android:paddingVertical="7dp"
-        android:hint="0"
         android:textAlignment="center"
         android:textColor="@color/light_blue_1"
         android:textSize="24dp" />
