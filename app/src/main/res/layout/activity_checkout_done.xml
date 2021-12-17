@@ -40,7 +40,6 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/light_blue_2_button"
         android:fontFamily="@font/heavyheap"
-        android:onClick="backToLogin"
         android:text="back!"
         android:textColor="@color/red"
         android:textSize="35sp"
