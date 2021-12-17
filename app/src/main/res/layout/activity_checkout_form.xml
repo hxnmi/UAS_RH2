@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_opacity"
+    android:background="@color/red2"
     android:orientation="horizontal"
     tools:context=".checkout_form">
 
@@ -60,7 +60,7 @@
 
     <EditText
         android:id="@+id/editAddresss"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40sp"
         android:layout_marginStart="40dp"
@@ -71,7 +71,7 @@
         android:fontFamily="@font/montserrat_semi_bold"
         android:hint="Destination Address"
         android:inputType="text"
-        android:minHeight="48dp"
+        android:minHeight="30dp"
         android:paddingLeft="10dp"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,7 +112,7 @@
             android:padding="8dp"
             android:shadowColor="@color/white"
             android:shadowRadius="10"
-            android:text="POS IRLANDIA"
+            android:text="Pos Irlandia"
             android:textColor="@color/red"
             android:textSize="24sp"
             app:layout_constraintTop_toBottomOf="@id/chooseExpeditionTitle" />
