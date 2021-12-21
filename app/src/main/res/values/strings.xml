@@ -2,4 +2,33 @@
     <string name="app_name">43UG_A11.2020.12434_MICHAELINDRAWAN_UTSPPB</string>
     <string name="ForgotPassword"><u>Forgot Password!</u></string>
     <string name="SignUp"><u>Sign Up!</u></string>
+
+    <string-array name="car_name">
+        <item>Dragon Blaster</item>
+        <item>Rodger Dodger</item>
+        <item>2020 Koenigsegg Jesko</item>
+        <item>Winning Formula</item>
+        <item>Power Rocket</item>
+
+        <item>Ford Mustang GT</item>
+        <item>Tricera Truck</item>
+        <item>Total Disposal</item>
+        <item>Roller Toaster</item>
+        <item>Chevy El Camino</item>
+
+    </string-array>
+
+    <string-array name="harga">
+        <item>$99.99</item>
+        <item>$99.99</item>
+        <item>$9.99</item>
+        <item>$9.99</item>
+        <item>$9.99</item>
+        <item>$1.49</item>
+        <item>$1.49</item>
+        <item>$1.49</item>
+        <item>$1.49</item>
+        <item>$1.49</item>
+
+    </string-array>
 </resources>

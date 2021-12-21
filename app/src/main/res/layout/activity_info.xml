@@ -74,16 +74,6 @@
         app:layout_constraintLeft_toRightOf="@+id/des3"
         app:layout_constraintTop_toBottomOf="@id/des2"/>
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="<"
-        android:textSize="30sp"
-        android:background="@color/white"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
     <TextView
         android:id="@+id/nama"
         android:layout_width="wrap_content"

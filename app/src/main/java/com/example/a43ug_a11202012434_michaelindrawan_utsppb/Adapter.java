@@ -1,56 +1,79 @@
 package com.example.a43ug_a11202012434_michaelindrawan_utsppb;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.NamaViewHolder> {
+public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+
+
+    String data1[],data2[];
+    int images[];
+    Context context;
+
+    public Adapter(Context ct,String s1[],String s2[],int img[]){
+        context=ct;
+        data1=s1;
+        data2=s2;
+        images=img;
+    }
+
+
     @NonNull
     @Override
-    public NamaViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
-        View view = inflater.inflate(R.layout.appearance_hw_store, viewGroup, false);
-        return new NamaViewHolder(view);
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater= LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.appearance_hw_store,parent,false);
+
+        return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NamaViewHolder namaViewHolder, int i) {
-        String title = hw_list[i];
-        String price = hw_price[i];
-        int img = images[i];
-        namaViewHolder.title.setText(title);
-        namaViewHolder.price.setText(price);
-        namaViewHolder.imgIcon.setImageResource(img);
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.myText1.setText(data1[position]);
+        holder.myText2.setText(data2[position]);
+        holder.myImage.setImageResource(images[position]);
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(context,Info.class);
+                intent.putExtra("data1",data1[position]);
+                intent.putExtra("data2",data2[position]);
+                intent.putExtra("myImage",images[position]);
+                context.startActivity(intent);
+            }
+        });
+
 
     }
 
     @Override
     public int getItemCount() {
-        return hw_list.length;
+        return images.length;
     }
 
-    public class NamaViewHolder extends RecyclerView.ViewHolder{
-        ImageView imgIcon;
-        TextView title;
-        TextView price;
-        public NamaViewHolder(@NonNull View itemView) {
+    public class MyViewHolder extends RecyclerView.ViewHolder{
+
+        TextView myText1, myText2;
+        ImageView myImage;
+        Button mainLayout;
+
+        public MyViewHolder(@NonNull View itemView){
             super(itemView);
-            imgIcon = (ImageView) itemView.findViewById(R.id.imageIcon);
-            title = (TextView) itemView.findViewById(R.id.title);
-            price = (TextView) itemView.findViewById(R.id.price);
+            myText1=itemView.findViewById(R.id.title);
+            myText2=itemView.findViewById(R.id.price);
+            myImage=itemView.findViewById(R.id.imageIcon);
+            mainLayout=itemView.findViewById(R.id.info_hw);
+
         }
-    }
-    private String[] hw_list;
-    private String[] hw_price;
-    private int[] images;
-    public Adapter(String[] hw_list, String[] hw_price, int[] images){
-        this.hw_price = hw_price;
-        this.hw_list = hw_list;
-        this.images = images;
     }
 }
