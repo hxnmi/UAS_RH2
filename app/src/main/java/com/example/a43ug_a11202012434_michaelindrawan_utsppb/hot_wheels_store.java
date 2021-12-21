@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class hot_wheels_store extends AppCompatActivity {
     RecyclerView recyclerV;
 
-    String s1[],s2 [];
+    String s1[],s2 [],s3 [],s4 [],s5 [],s6[];
     int images[]={
             R.drawable.hw_dragonblaster,
             R.drawable.hw_rodgerdodger,
@@ -33,8 +33,12 @@ public class hot_wheels_store extends AppCompatActivity {
         recyclerV= findViewById(R.id.HotWheelsStore);
         s1=getResources().getStringArray(R.array.car_name);
         s2=getResources().getStringArray(R.array.harga);
+        s3=getResources().getStringArray(R.array.debut);
+        s4=getResources().getStringArray(R.array.produced);
+        s5=getResources().getStringArray(R.array.designer);
+        s6=getResources().getStringArray(R.array.desc);
 
-        Adapter myAdapter=new Adapter(this,s1,s2,images);
+        Adapter myAdapter=new Adapter(this,s1,s2,s3,s4,s5,s6,images);
         recyclerV.setAdapter(myAdapter);
         recyclerV.setLayoutManager(new LinearLayoutManager(this));
 

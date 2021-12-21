@@ -31,4 +31,65 @@
         <item>$1.49</item>
 
     </string-array>
+
+
+    <string-array name="debut">
+        <item>	Color Shifters Creatures</item>
+        <item>	Flying Colors</item>
+        <item>  HW Exotics</item>
+        <item>  HW Race - HW Race Team</item>
+        <item>  1995 Model Series</item>
+
+        <item>	2004 First Editions</item>
+        <item>	Dino Riders</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+
+    <string-array name="produced">
+        <item>2010 - Present</item>
+        <item>1974 - 1979 (Original)</item>
+        <item>2020 - Present</item>
+        <item>2015 - Present</item>
+        <item>1995 - 2014 (Regular)</item>
+
+        <item>2004 - Present</item>
+        <item>2019 - Present</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="designer">
+        <item>Julian Payne</item>
+        <item>Larry Wood</item>
+        <item>Ryu Asada</item>
+        <item>Julian Payne</item>
+        <item>Larry Wood</item>
+
+        <item>Dave Weise</item>
+        <item>Dmitriy Shakhmatov</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="desc">
+        <item>This casting is modeled after a dragon; the name of the casting was changed to Dragon with the release of the 2018 Street Beasts 5-Pack, but returned to Dragon Blaster the following year.</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+
+    </string-array>
+
+
 </resources>
