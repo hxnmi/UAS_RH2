@@ -42,10 +42,9 @@
 
         <item>	2004 First Editions</item>
         <item>	Dino Riders</item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>	HW Metro</item>
+        <item>  Legends of Speed</item>
+        <item>	El Camino 40th Anniversary</item>
     </string-array>
 
     <string-array name="produced">
@@ -57,10 +56,9 @@
 
         <item>2004 - Present</item>
         <item>2019 - Present</item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>2020 - Present</item>
+        <item>2017 - Present</item>
+        <item>1999-2006</item>
     </string-array>
     <string-array name="designer">
         <item>Julian Payne</item>
@@ -71,23 +69,20 @@
 
         <item>Dave Weise</item>
         <item>Dmitriy Shakhmatov</item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Ryu Asada</item>
+        <item>Ryu Asada</item>
+        <item>Larry Wood</item>
     </string-array>
     <string-array name="desc">
         <item>This casting is modeled after a dragon; the name of the casting was changed to Dragon with the release of the 2018 Street Beasts 5-Pack, but returned to Dragon Blaster the following year.</item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>The Rodger Dodger Is Hot Wheels Original Casting Based on Dodge Charger SE with triple opera window option.The early version had a metal base and capped redlines in the rear only.</item>
+        <item>Designed as the successor to the Agera.Jesko is designed to be a high-performance track car and is named after von Koenigsegg father, Jesko von Koenigsegg.</item>
+        <item>This open wheeled racer has it all figured out. With front and rear wings plus a 2.4 liter twin turbocharged V8 and extra air vents to help cool it down</item>
+        <item> This super fast rocket car has an opening canopy. in 2015, the casting was changed with the wings being closed, the engine being a bit bigger and the canopy can no longer be opened.</item>
+        <item>This concept served as based for the fifth generation Ford Mustang. In 2009, this casting was tooled to have a light bar on top so it could be used as a police vehicle.</item>
+        <item>What has four wheels and three horns? Tricera-Truck! This truck has all the frills, including a triceratops-ridged roof, twin front radiators, and a supercharged engine that is pure dino-mite.</item>
+        <item>This ride is so stinking cool that it s safe to say no one ll be holding their nose when this bad boy rolls up.</item>
+        <item>The Roller Toaster is a Hot Wheels original model designed by Ryu Asada. Ryu tells in the All Access blog on the Hot Wheels YouTube Channel that he got the idea for this model from the 24 Hours of Lemons in his mind.</item>
 
     </string-array>
 
