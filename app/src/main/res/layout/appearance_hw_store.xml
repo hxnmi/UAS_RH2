@@ -69,9 +69,10 @@
         android:fontFamily="@font/montserrat_semi_bold"
         android:hint="0"
         android:inputType="number"
+        android:maxLength="2"
         android:paddingVertical="7dp"
         android:textAlignment="center"
-        android:textColor="@color/light_blue_1"
+        android:textColor="@color/black"
         android:textSize="24dp" />
 
 
