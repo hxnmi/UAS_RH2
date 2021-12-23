@@ -60,6 +60,8 @@
         android:fontFamily="sans-serif-condensed"
         android:text="NIM\nA11.2020.12434 \n\nKelas\n43UG \n\nEmail\n111202012434@mhs.dinus.ac.id"
         android:textColor="@color/white"
+        android:shadowColor="@color/red"
+        android:shadowRadius="10"
         android:textStyle="bold"
         android:textSize="20sp"
         android:textAlignment="center"
