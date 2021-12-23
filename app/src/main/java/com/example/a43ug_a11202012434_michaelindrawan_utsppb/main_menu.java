@@ -21,4 +21,8 @@ public class main_menu extends AppCompatActivity {
         Intent i = new Intent(main_menu.this, hot_wheels_store.class);
         startActivity(i);
     }
+    public void toAbout(View view){
+        Intent i = new Intent(main_menu.this, about_dev_main.class);
+        startActivity(i);
+    }
 }
