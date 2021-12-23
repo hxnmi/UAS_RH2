@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".about_dev_main"
-    android:background="@color/light_blue_1">
+    android:background="@drawable/background_opacity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -25,9 +25,11 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/heavyheap"
+                android:shadowColor="@color/red2"
+                android:shadowRadius="20"
                 android:text="ABOUT DEV"
-                android:textColor="@color/white"
-                android:textSize="36sp" />
+                android:textColor="@color/red"
+                android:textSize="65sp" />
 
             <TextView
                 android:id="@+id/AboutDevDec"
@@ -38,8 +40,10 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-condensed"
                 android:text="HotWheels Retail's Hub Developer Profil"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textColor="@color/red"
+                android:shadowColor="@color/red2"
+                android:shadowRadius="20"
+                android:textSize="20sp" />
         </RelativeLayout>
 
         <GridLayout
@@ -65,7 +69,8 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="16dp"
+                    android:background="@drawable/bg_about">
 
                     <ImageView
                         android:layout_width="80dp"
@@ -80,7 +85,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:fontFamily="@font/montserrat_semi_bold"
-                        android:background="@drawable/button"
+                        android:background="@drawable/main_menu_option_bar_1"
                         android:padding="10dp"
                         android:onClick="profilFandy" />
                 </LinearLayout>
@@ -100,7 +105,8 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:background="@drawable/bg_about">
 
                     <ImageView
                         android:src="@drawable/dev_hanif"
@@ -115,7 +121,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:fontFamily="@font/montserrat_semi_bold"
-                        android:background="@drawable/button"
+                        android:background="@drawable/main_menu_option_bar_1"
                         android:padding="10dp"
                         android:onClick="profilHanif" />
                 </LinearLayout>
@@ -135,7 +141,8 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:background="@drawable/bg_about">
 
                     <ImageView
                         android:src="@drawable/dev_michael"
@@ -150,7 +157,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:fontFamily="@font/montserrat_semi_bold"
-                        android:background="@drawable/button"
+                        android:background="@drawable/main_menu_option_bar_1"
                         android:padding="10dp"
                         android:onClick="profilMichael" />
                 </LinearLayout>
@@ -170,7 +177,8 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:background="@drawable/bg_about">
 
                     <ImageView
                         android:src="@drawable/dev_tito"
@@ -185,7 +193,7 @@
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:fontFamily="@font/montserrat_semi_bold"
-                        android:background="@drawable/button"
+                        android:background="@drawable/main_menu_option_bar_1"
                         android:padding="10dp"
                         android:onClick="profilTito" />
                 </LinearLayout>
