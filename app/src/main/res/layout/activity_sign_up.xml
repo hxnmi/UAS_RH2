@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_1"
+    android:orientation="vertical"
+    tools:context=".sign_up">
+
+    <ImageView
+        android:id="@+id/BackgroundHotWheels"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_hotwheels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heavyheap"
+        android:paddingBottom="50sp"
+        android:shadowColor="@color/light_blue_3"
+        android:shadowRadius="75"
+        android:text="Create your Account"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="65sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/EditEmail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EditFirstName"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40sp"
+        android:layout_marginBottom="20dp"
+        android:width="300dp"
+        android:background="@drawable/edit_text"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/EditLastName"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:width="300dp"
+        android:background="@drawable/edit_text"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:hint="Last name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintLeft_toRightOf="@id/EditFirstName"/>
+
+    <EditText
+        android:id="@+id/EditEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="40sp"
+        android:layout_marginTop="10dp"
+        android:width="300dp"
+        android:background="@drawable/edit_text"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditLastName" />
+
+    <EditText
+        android:id="@+id/EditPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="40sp"
+        android:layout_marginTop="10dp"
+        android:width="300dp"
+        android:background="@drawable/edit_text"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:paddingLeft="10sp"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditEmail" />
+
+    <EditText
+        android:id="@+id/EditConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="40sp"
+        android:width="300dp"
+        android:background="@drawable/edit_text"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:paddingLeft="10sp"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditPassword" />
+
+    <Button
+        android:id="@+id/SignupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/light_blue_2_button"
+        android:fontFamily="@font/heavyheap"
+        android:onClick="signupButton"
+        android:paddingHorizontal="30sp"
+        android:text="SIGN UP!"
+        android:textColor="@color/red"
+        android:textSize="35sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditConfirmPassword" />
+
+    <TextView
+        android:id="@+id/NameEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Fill Your Name To Create"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
+
+    <TextView
+        android:id="@+id/EmailEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Email Must Be Filled!"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
+
+    <TextView
+        android:id="@+id/PasswordEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Create Your Password!"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
+
+    <TextView
+        android:id="@+id/ConfirmPasswordEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Confirm Your Password!"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
+
+    <TextView
+        android:id="@+id/WrongEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Email that you entered is incorrect!"        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
+
+    <TextView
+        android:id="@+id/PasswordnotMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Password and confirm password does not match!"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

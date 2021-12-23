@@ -36,6 +36,11 @@ public class log_in extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void signup(View view){
+        Intent i = new Intent(log_in.this, sign_up.class);
+        startActivity(i);
+    }
+
     public void loginButton(View view){
      if((TextUtils.isEmpty(EditEmail.getText().toString().trim()))||(TextUtils.isEmpty(EditPassword.getText().toString().trim()))){
          TransitionManager.beginDelayedTransition(Container);

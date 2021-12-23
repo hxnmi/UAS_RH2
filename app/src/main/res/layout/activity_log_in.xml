@@ -101,6 +101,7 @@
         android:layout_marginTop="10sp"
         android:layout_marginRight="20sp"
         android:fontFamily="@font/montserrat_semi_bold"
+        android:onClick="signup"
         android:text="@string/SignUp"
         android:textColor="@color/red"
         android:textSize="18sp" />
