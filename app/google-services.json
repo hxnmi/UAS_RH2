@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "265258538280",
+    "firebase_url": "https://uas-rh-default-rtdb.firebaseio.com",
+    "project_id": "uas-rh",
+    "storage_bucket": "uas-rh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265258538280:android:72072d0664bb00389eac1d",
+        "android_client_info": {
+          "package_name": "com.example.a43ug_a11202012434_michaelindrawan_utsppb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265258538280-6q10bnms8tmn7k06keodrdmdk6cjl71u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnPzdd9OEE74CsdI4sb0PvXlEEj05bUhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265258538280-6q10bnms8tmn7k06keodrdmdk6cjl71u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
