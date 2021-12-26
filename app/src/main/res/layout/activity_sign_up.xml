@@ -43,7 +43,8 @@
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40sp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="11dp"
         android:width="300dp"
         android:background="@drawable/edit_text"
         android:fontFamily="@font/montserrat_semi_bold"
@@ -58,7 +59,7 @@
         android:id="@+id/EditLastName"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="10dp"
         android:width="300dp"
         android:background="@drawable/edit_text"
         android:fontFamily="@font/montserrat_semi_bold"
@@ -66,9 +67,9 @@
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textSize="24sp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView"
-        app:layout_constraintLeft_toRightOf="@id/EditFirstName"/>
+        app:layout_constraintStart_toEndOf="@+id/EditFirstName"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
         android:id="@+id/EditEmail"
