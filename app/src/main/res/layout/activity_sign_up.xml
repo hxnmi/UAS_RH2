@@ -137,7 +137,6 @@
         android:layout_marginTop="30sp"
         android:background="@drawable/light_blue_2_button"
         android:fontFamily="@font/heavyheap"
-        android:onClick="signupButton"
         android:paddingHorizontal="30sp"
         android:text="SIGN UP!"
         android:textColor="@color/red"

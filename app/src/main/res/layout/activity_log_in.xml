@@ -64,19 +64,19 @@
         android:background="@drawable/edit_text"
         android:hint="Password"
         android:maxLength="15"/>
+
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/EditPassword"
-        android:text="LOG IN!"
-        android:textSize="35sp"
-        android:textColor="@color/red"
-        android:paddingHorizontal="30sp"
+        android:layout_centerInParent="true"
         android:background="@drawable/light_blue_2_button"
         android:fontFamily="@font/heavyheap"
-        android:layout_centerInParent="true"
-        android:onClick="loginButton"/>
+        android:paddingHorizontal="30sp"
+        android:text="LOG IN!"
+        android:textColor="@color/red"
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/ForgotPassword"
