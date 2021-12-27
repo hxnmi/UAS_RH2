@@ -80,7 +80,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
                 else {
                     data7[position] = Integer.parseInt(jumlahBeli);
-                    Toast.makeText(context.getApplicationContext(), data1[position]+" "+data7[position], Toast.LENGTH_SHORT).show();
                 }
 
 

@@ -59,7 +59,7 @@
         />
 
     <EditText
-        android:id="@+id/editAddresss"
+        android:id="@+id/editAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40sp"
@@ -90,7 +90,7 @@
         android:textAlignment="center"
         android:textColor="@color/red"
         android:textSize="35sp"
-        app:layout_constraintTop_toBottomOf="@id/editAddresss" />
+        app:layout_constraintTop_toBottomOf="@id/editAddress" />
 
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -149,7 +149,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonToCheckOutDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="90dp"
@@ -160,8 +160,29 @@
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup1"
-        android:onClick="toCheckOutDone"/>
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup1"/>
 
+    <TextView
+        android:id="@+id/mustEnteredDest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="You Must Filled Your Destination Form!"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/red"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/buttonToCheckOutDone"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/mustEnteredExp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="You Must Choose Your Expedition!"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/red"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/buttonToCheckOutDone"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

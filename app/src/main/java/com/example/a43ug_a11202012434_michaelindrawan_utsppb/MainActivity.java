@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        }, 3500);
+        }, 4250);
     }
     @Override
     protected void onStart() {
