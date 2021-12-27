@@ -62,8 +62,8 @@ public class checkout_form extends AppCompatActivity {
                 }
                 else{
                     if (!passed){
-                        mustEnteredAddress.setVisibility(View.VISIBLE);
-                        mustEnteredExp.setVisibility(View.GONE);
+                        mustEnteredAddress.setVisibility(View.GONE);
+                        mustEnteredExp.setVisibility(View.VISIBLE);
                     }
                     else {
                         Intent i = new Intent(checkout_form.this, checkout_done.class);
