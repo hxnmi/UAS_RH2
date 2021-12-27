@@ -61,7 +61,6 @@ public class hot_wheels_store extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(), checkout_form.class);
                     DecimalFormat numberFormat = new DecimalFormat("#.00");
                     i.putExtra("tPrice", numberFormat.format(myAdapter.checkOutPrice()));
-                    Toast.makeText(getApplicationContext(), " "+numberFormat.format(myAdapter.checkOutPrice()), Toast.LENGTH_SHORT).show();
                     getApplicationContext().startActivity(i);
                 }
             }
