@@ -47,6 +47,5 @@
       android:textColor="@color/light_blue_1"
       android:layout_gravity="center"
       android:gravity="center"
-      android:onClick="toCheckOut"
       />
 </androidx.constraintlayout.widget.ConstraintLayout>

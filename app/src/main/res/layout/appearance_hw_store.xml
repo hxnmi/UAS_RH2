@@ -67,7 +67,6 @@
         android:layout_toRightOf="@id/info_hw"
         android:background="@drawable/bg_jumlahbeli"
         android:fontFamily="@font/montserrat_semi_bold"
-        android:hint="0"
         android:inputType="number"
         android:maxLength="2"
         android:paddingVertical="7dp"
