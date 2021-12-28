@@ -131,6 +131,25 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/EditPassword" />
 
+    <EditText
+        android:id="@+id/EditPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:layout_marginHorizontal="40sp"
+        android:width="300dp"
+        android:background="@drawable/edit_text"
+        android:drawableStart="@drawable/ic_baseline_smartphone_24"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:maxLength="15"
+        android:paddingLeft="10sp"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EditConfirmPassword" />
+
     <Button
         android:id="@+id/SignupButton"
         android:layout_width="wrap_content"
@@ -144,7 +163,7 @@
         android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/EditConfirmPassword" />
+        app:layout_constraintTop_toBottomOf="@id/EditPhone" />
 
     <TextView
         android:id="@+id/NameEmpty"
@@ -208,7 +227,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
         android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Email that you entered is incorrect!"        android:textColor="@color/red"
+        android:text="Email That You Entered is Incorrect!"
+        android:textColor="@color/red"
         android:textSize="15sp"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -221,7 +241,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
         android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Password and confirm password does not match!"
+        android:text="Password and Confirm Password Doesn't Match!"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
+
+    <TextView
+        android:id="@+id/PhoneEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="Please Enter Your Number!"
         android:textColor="@color/red"
         android:textSize="15sp"
         android:visibility="gone"

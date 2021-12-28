@@ -36,11 +36,13 @@ public class sign_up extends AppCompatActivity {
     TextView EmailEmpty;
     TextView PasswordEmpty;
     TextView ConfirmPasswordEmpty;
+    TextView PhoneEmpty;
     EditText EditFirstName;
     EditText EditLastName;
     EditText EditEmail;
     EditText EditPassword;
     EditText EditConfirmPassword;
+    EditText EditPhone;
     Button BtnSignUp;
     DatabaseReference reff;
     Users xuser;
@@ -60,9 +62,11 @@ public class sign_up extends AppCompatActivity {
         EmailEmpty = findViewById(R.id.EmailEmpty);
         PasswordEmpty = findViewById(R.id.PasswordEmpty);
         ConfirmPasswordEmpty = findViewById(R.id.ConfirmPasswordEmpty);
+        PhoneEmpty = findViewById(R.id.PhoneEmpty);
         EditFirstName = findViewById(R.id.EditFirstName);
         EditLastName = findViewById(R.id.EditLastName);
         EditConfirmPassword = findViewById(R.id.EditConfirmPassword);
+        EditPhone = findViewById(R.id.EditPhone);
         Container = findViewById(R.id.Container);
         fAuth = FirebaseAuth.getInstance();
 
@@ -153,6 +157,17 @@ public class sign_up extends AppCompatActivity {
             WrongEmail.setVisibility(View.GONE);
             PasswordnotMatch.setVisibility(View.VISIBLE);
         }
+        else
+        if(TextUtils.isEmpty(EditPhone.getText().toString().trim())){
+            TransitionManager.beginDelayedTransition(Container);
+            NameEmpty.setVisibility(View.GONE);
+            EmailEmpty.setVisibility(View.GONE);
+            PasswordEmpty.setVisibility(View.GONE);
+            ConfirmPasswordEmpty.setVisibility(View.GONE);
+            WrongEmail.setVisibility(View.GONE);
+            PasswordnotMatch.setVisibility(View.GONE);
+            PhoneEmpty.setVisibility(View.VISIBLE);
+        }
         else{
             NameEmpty.setVisibility(View.GONE);
             EmailEmpty.setVisibility(View.GONE);
@@ -160,6 +175,7 @@ public class sign_up extends AppCompatActivity {
             ConfirmPasswordEmpty.setVisibility(View.GONE);
             WrongEmail.setVisibility(View.GONE);
             PasswordnotMatch.setVisibility(View.GONE);
+            PhoneEmpty.setVisibility(View.GONE);
 
             fAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -182,6 +198,7 @@ public class sign_up extends AppCompatActivity {
                                 xuser.SetLName(EditLastName.getText().toString().trim());
                                 xuser.SetEmail(EditEmail.getText().toString().trim());
                                 xuser.SetPassword(EditPassword.getText().toString().trim());
+                                xuser.SetPhone(EditPhone.getText().toString().trim());
                                 reff.push().setValue(xuser);
                                 Intent i = new Intent(sign_up.this, log_in.class);
                                 startActivity(i);

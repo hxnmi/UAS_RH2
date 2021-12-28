@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Latihan/Java (Adroid Studio)/UAS_RH/app/src/main/res/drawable-v24/ic_baseline_check_box_24.xml" value="0.19537037037037036" />
         <entry key="..\:/Latihan/Java (Adroid Studio)/UAS_RH/app/src/main/res/drawable/backgroung_wave_blue.xml" value="0.1824074074074074" />
         <entry key="..\:/Latihan/Java (Adroid Studio)/UAS_RH/app/src/main/res/drawable/bg_about.xml" value="0.1824074074074074" />
         <entry key="..\:/Latihan/Java (Adroid Studio)/UAS_RH/app/src/main/res/drawable/button.xml" value="0.1824074074074074" />
+        <entry key="..\:/Latihan/Java (Adroid Studio)/UAS_RH/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.19537037037037036" />
         <entry key="..\:/Latihan/Java (Adroid Studio)/UAS_RH/app/src/main/res/drawable/main_menu_option_bar_1.xml" value="0.1824074074074074" />
         <entry key="..\:/Latihan/Java (Adroid Studio)/UAS_RH/app/src/main/res/layout/activity_about_dev_fandy.xml" value="0.2" />
         <entry key="..\:/Latihan/Java (Adroid Studio)/UAS_RH/app/src/main/res/layout/activity_about_dev_hanif.xml" value="0.12714543812104787" />

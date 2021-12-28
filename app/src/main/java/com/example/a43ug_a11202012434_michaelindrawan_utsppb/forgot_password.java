@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.transition.TransitionManager;
 import android.util.Patterns;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -75,7 +77,7 @@ public class forgot_password extends AppCompatActivity {
                         .addOnSuccessListener(this, new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(forgot_password.this, "Reset Code Sent To Your Email.",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(forgot_password.this, "Reset Code Has Been Sent To Your Email",Toast.LENGTH_SHORT).show();
                                 Intent i = new Intent(forgot_password.this, reset_password.class);
                                 startActivity(i);
                             }
@@ -83,7 +85,13 @@ public class forgot_password extends AppCompatActivity {
                         .addOnFailureListener(this, new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(forgot_password.this, "Error! Reset Code not sent" + e.getMessage(),Toast.LENGTH_SHORT).show();
+                                Toast toast = Toast.makeText(forgot_password.this, "Error! Can't Send The Reset Code.\n" + e.getMessage(),Toast.LENGTH_LONG);
+                                LinearLayout layout = (LinearLayout) toast.getView();
+                                if (layout.getChildCount() > 0) {
+                                    TextView tv = (TextView) layout.getChildAt(0);
+                                    tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
+                                }
+                                toast.show();
                             }
                         });
             }
