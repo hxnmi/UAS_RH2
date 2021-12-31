@@ -15,6 +15,7 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.transition.TransitionManager;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -38,10 +39,10 @@ public class checkout_form extends AppCompatActivity {
     String tPrice, alamat;
     TextView totalPrice;
     EditText editAddress;
-    TextView mustEnteredExp, mustEnteredAddress;
-    Button toCheckOutDone;
+    Button toCheckOutDone, yourDest;
     Boolean passed;
     RadioGroup radioButton;
+    ViewGroup Container;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +50,11 @@ public class checkout_form extends AppCompatActivity {
         setContentView(R.layout.activity_checkout_form);
         totalPrice = (TextView) findViewById(R.id.totalPrice);
         editAddress = findViewById(R.id.editAddress);
-        mustEnteredAddress = findViewById(R.id.mustEnteredDest);
-        mustEnteredExp = findViewById(R.id.mustEnteredExp);
         toCheckOutDone = findViewById(R.id.buttonToCheckOutDone);
+        yourDest = findViewById(R.id.yourDest);
         this.passed = false;
         radioButton = (RadioGroup) findViewById(R.id.radioGroup1);
+        Container = findViewById(R.id.Container);
         radioButton.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -71,15 +72,14 @@ public class checkout_form extends AppCompatActivity {
             }
         });
         toCheckOutDone.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
-                if (TextUtils.isEmpty(editAddress.getText().toString())) {
-                    mustEnteredAddress.setVisibility(View.VISIBLE);
-                    mustEnteredExp.setVisibility(View.GONE);
+                if (TextUtils.isEmpty(editAddress.getText())) {
+                    Toast.makeText(getApplicationContext(), "You Must Entered Your Destination!", Toast.LENGTH_SHORT).show();
                 } else {
                     if (!passed) {
-                        mustEnteredAddress.setVisibility(View.GONE);
-                        mustEnteredExp.setVisibility(View.VISIBLE);
+                        Toast.makeText(getApplicationContext(), "You Must Choose Your Expedition!", Toast.LENGTH_SHORT).show();
                     } else {
                         Intent i = new Intent(checkout_form.this, checkout_done.class);
                         startActivity(i);
@@ -87,7 +87,7 @@ public class checkout_form extends AppCompatActivity {
                 }
             }
         });
-        editAddress.setOnClickListener(new View.OnClickListener() {
+        yourDest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getApplicationContext());
@@ -103,7 +103,6 @@ public class checkout_form extends AppCompatActivity {
                                 try {
                                     List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
                                     editAddress.setText((addresses.get(0).getAddressLine(0)).toString().trim());
-                                    Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_SHORT).show();
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 }
@@ -127,13 +126,9 @@ public class checkout_form extends AppCompatActivity {
         if(getIntent().hasExtra("tPrice")){
             tPrice = getIntent().getStringExtra("tPrice");
         }
-        if(getIntent().hasExtra("alamat")){
-            alamat = getIntent().getStringExtra("alamat");
-        }
     }
 
     public void setData(){
         totalPrice.setText("$ "+tPrice);
-        mustEnteredAddress.setText(alamat);
     }
 }

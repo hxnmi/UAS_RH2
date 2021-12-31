@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_opacity"
     android:orientation="horizontal"
+    android:id="@+id/Container"
     tools:context=".checkout_form">
 
     <TextView
@@ -78,11 +79,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/totalTitle" />
 
+    <Button
+        android:id="@+id/yourDest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="90dp"
+        android:background="@drawable/hw_store_button"
+        android:text="My Location"
+        android:fontFamily="@font/heavyheap"
+        android:textColor="@color/light_blue_1"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/editAddress"/>
     <TextView
         android:id="@+id/chooseExpeditionTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/heavyheap"
         android:shadowColor="@color/white"
         android:shadowRadius="10"
@@ -90,7 +103,7 @@
         android:textAlignment="center"
         android:textColor="@color/red"
         android:textSize="35sp"
-        app:layout_constraintTop_toBottomOf="@id/editAddress" />
+        app:layout_constraintTop_toBottomOf="@id/yourDest" />
 
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -162,27 +175,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup1"/>
 
-    <TextView
-        android:id="@+id/mustEnteredDest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="You Must Filled Your Destination Form!"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:textColor="@color/red"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/buttonToCheckOutDone"
-        android:visibility="gone"/>
-    <TextView
-        android:id="@+id/mustEnteredExp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="You Must Choose Your Expedition!"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:textColor="@color/red"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/buttonToCheckOutDone"
-        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
