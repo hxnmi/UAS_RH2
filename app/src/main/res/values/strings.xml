@@ -85,6 +85,8 @@
         <item>The Roller Toaster is a Hot Wheels original model designed by Ryu Asada. Ryu tells in the All Access blog on the Hot Wheels YouTube Channel that he got the idea for this model from the 24 Hours of Lemons in his mind.</item>
         <item>Very Old and Vintage. A true classic</item>
     </string-array>
+    <string name="title_activity_uas_hot_wheels_retails">UAS_HotWheelsRetails</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>
