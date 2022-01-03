@@ -20,13 +20,22 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class log_in extends AppCompatActivity {
     ViewGroup Container;
     TextView WrongEmail;
     TextView EmailandPasswordEmpty;
+    TextView EmailPasswordNotExist;
     EditText EditEmail;
     EditText EditPassword;
     Button BtnLogin;
@@ -42,6 +51,7 @@ public class log_in extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         WrongEmail = findViewById(R.id.WrongEmail);
         EmailandPasswordEmpty = findViewById(R.id.EmailPasswordisEmpty);
+        EmailPasswordNotExist = findViewById(R.id.EmailPasswordNotExist);
         EditEmail = findViewById(R.id.EditEmail);
         EditPassword = findViewById(R.id.EditPassword);
         Container = findViewById(R.id.Container);
@@ -70,40 +80,49 @@ public class log_in extends AppCompatActivity {
          TransitionManager.beginDelayedTransition(Container);
          EmailandPasswordEmpty.setVisibility(View.VISIBLE);
          WrongEmail.setVisibility(View.GONE);
+         EmailPasswordNotExist.setVisibility(View.GONE);
 
      }
      else
          if(!isValidEmail(EditEmail.getText().toString().trim())){
              TransitionManager.beginDelayedTransition(Container);
              EmailandPasswordEmpty.setVisibility(View.GONE);
+             EmailPasswordNotExist.setVisibility(View.GONE);
              WrongEmail.setVisibility(View.VISIBLE);
          }
          else{
              EmailandPasswordEmpty.setVisibility(View.GONE);
              WrongEmail.setVisibility(View.GONE);
-             fAuth.signInWithEmailAndPassword(email, password)
-                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                         @Override
-                         public void onComplete(@NonNull Task<AuthResult> task) {
-                             Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
-                             if (!task.isSuccessful()) {
-                                 Log.w(TAG, "signInWithEmail:failed", task.getException());
-                                 Toast toast = Toast.makeText(log_in.this, "Login Failed!\nInvalid Email or Password", Toast.LENGTH_LONG);
-                                 LinearLayout layout = (LinearLayout) toast.getView();
-                                 if (layout.getChildCount() > 0) {
-                                     TextView tv = (TextView) layout.getChildAt(0);
-                                     tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
-                                 }
-                                 toast.show();
-                             }
-                             else{
+             DatabaseReference reff = FirebaseDatabase.getInstance().getReference().child("User");
+             Query query = reff.orderByChild("email").equalTo(email);
+             query.addListenerForSingleValueEvent(new ValueEventListener() {
+                 @Override
+                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                     if(dataSnapshot.exists()){
+                         for (DataSnapshot user : dataSnapshot.getChildren()) {
+                             String password1 = user.child("password").getValue(String.class);
+                             if (password1.equals(password)) {
                                  Toast.makeText(log_in.this, "Login Success!", Toast.LENGTH_SHORT).show();
                                  Intent i = new Intent(log_in.this, main_menu.class);
+                                 i.putExtra("email", email);
                                  startActivity(i);
+                             } else {
+                                 Toast.makeText(log_in.this, "Password is wrong", Toast.LENGTH_SHORT).show();
                              }
                          }
-                     });
-         }
+                     } else {
+                         EmailPasswordNotExist.setVisibility(View.VISIBLE);
+                     }
+
+                 }
+
+                 @Override
+                 public void onCancelled(@NonNull DatabaseError error) {
+
+                 }
+             });
+
+        }
     }
 
     public static boolean isValidEmail(CharSequence email){

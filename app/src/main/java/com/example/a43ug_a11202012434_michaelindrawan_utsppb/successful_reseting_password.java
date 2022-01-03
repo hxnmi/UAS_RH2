@@ -18,5 +18,6 @@ public class successful_reseting_password extends AppCompatActivity {
     public void backToLogin(View view) {
         Intent i  = new Intent(successful_reseting_password.this, log_in.class);
         startActivity(i);
+        finish();
     }
 }
