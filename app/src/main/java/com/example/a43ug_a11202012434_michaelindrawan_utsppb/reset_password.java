@@ -14,15 +14,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.Query;
 
 
 public class reset_password extends AppCompatActivity {
@@ -35,8 +34,6 @@ public class reset_password extends AppCompatActivity {
     ViewGroup Container;
     TextView CodenotMatch;
     Button BtnConfirm;
-    DatabaseReference reff;
-    FirebaseUser user;
     FirebaseAuth fAuth;
     FirebaseAuth.AuthStateListener fStateListener;
 
@@ -71,36 +68,18 @@ public class reset_password extends AppCompatActivity {
         };
 
 
-        user = fAuth.getCurrentUser();
-        reff = FirebaseDatabase.getInstance().getReference().child("User");
 
-        reff.addValueEventListener(new ValueEventListener() {
+        BtnConfirm = findViewById(R.id.ConfirmButton);
+        BtnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-
-                String oldPassword = dataSnapshot.child("password").getValue().toString();
-
-                BtnConfirm.setOnClickListener(new View.OnClickListener(){
-                    @Override
-                    public void onClick(View view){
-                        resetPassword(oldPassword, EditPassword.getText().toString(),EditNewPassword.getText().toString());
-                    }
-
-                });
-
+            public void onClick(View view) {
+                resetPassword(EditNewPassword.getText().toString());
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-
         });
-
     }
 
-    public void resetPassword(String oldPassword,String edtPassword, final String newPassword){
+
+    public void resetPassword(final String newPassword){
 
 
         if((TextUtils.isEmpty(Edit6DigitsCode.getText().toString().trim()))||(TextUtils.isEmpty(EditNewPassword.getText().toString().trim()))||TextUtils.isEmpty(ConfirmNewPassword.getText().toString().trim())){
@@ -123,24 +102,43 @@ public class reset_password extends AppCompatActivity {
                 PasswordnotMatch.setVisibility(View.GONE);
                 CodenotMatch.setVisibility(View.VISIBLE);
             }
-            else if(edtPassword.equals(oldPassword)){
+            else{
                 PasswordandCodeEmpty.setVisibility(View.GONE);
                 PasswordnotMatch.setVisibility(View.GONE);
                 CodenotMatch.setVisibility(View.GONE);
 
-
-                    user.updatePassword(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Log.d(TAG, "Password updated");
-                                Intent i = new Intent(reset_password.this, successful_reseting_password.class);
+                String email = getIntent().getStringExtra("email");
+                DatabaseReference reff = FirebaseDatabase.getInstance().getReference().child("User");
+                Query query = reff.orderByChild("email").equalTo(email);
+                query.addChildEventListener(
+                        new ChildEventListener() {
+                            @Override
+                            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                                reff.child(dataSnapshot.getKey()).child("password").setValue(newPassword);
+                                Intent i = new Intent(reset_password.this, log_in.class);
                                 startActivity(i);
-                            } else {
-                                Log.d(TAG, "Error password not updated");
+                                finish();
                             }
-                        }
-                    });
+
+                            @Override
+                            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                            }
+
+                            @Override
+                            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+
+                            @Override
+                            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                            }
+                        });
+
 
                  }
             }
