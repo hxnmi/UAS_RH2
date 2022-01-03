@@ -7,15 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.transition.TransitionManager;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,11 +31,7 @@ public class reset_password extends AppCompatActivity {
     ViewGroup Container;
     TextView CodenotMatch;
     Button BtnConfirm;
-    FirebaseAuth fAuth;
-    FirebaseAuth.AuthStateListener fStateListener;
 
-
-    private static final String TAG = reset_password.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,21 +45,6 @@ public class reset_password extends AppCompatActivity {
         PasswordnotMatch = findViewById(R.id.PasswordnotMatch);
         CodenotMatch = findViewById(R.id.CodenotMatch);
         Container = findViewById(R.id.Container);
-        fAuth = FirebaseAuth.getInstance();
-
-        fStateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if(user!=null) {
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                }
-                else {
-                    Log.d(TAG, "onAuthStateChanged:signed_out:");
-                }
-            }
-        };
-
 
 
         BtnConfirm = findViewById(R.id.ConfirmButton);
@@ -142,20 +120,6 @@ public class reset_password extends AppCompatActivity {
 
                  }
             }
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        fAuth.addAuthStateListener(fStateListener);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (fStateListener != null) {
-            fAuth.removeAuthStateListener(fStateListener);
-        }
     }
 
 }

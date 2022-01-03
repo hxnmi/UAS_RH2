@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.transition.TransitionManager;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -29,12 +25,10 @@ public class forgot_password extends AppCompatActivity {
     EditText EditEmailTxt;
     TextView EmailWrong;
     TextView EmailEmpty;
+    TextView EmailNotExist;
     ViewGroup Container;
     Button BtnSend;
-    FirebaseAuth fAuth;
-    FirebaseAuth.AuthStateListener fStateListener;
 
-    private static final String TAG = sign_up.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,20 +37,8 @@ public class forgot_password extends AppCompatActivity {
         EditEmailTxt = findViewById(R.id.EditEmail);
         EmailEmpty = findViewById(R.id.EmailEmpty);
         EmailWrong = findViewById(R.id.EmailWrong);
+        EmailNotExist = findViewById(R.id.EmailNotExist);
         Container = findViewById(R.id.Container);
-        fAuth = FirebaseAuth.getInstance();
-
-        fStateListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                } else {
-                    Log.d(TAG, "onAuthStateChanged:signed_out:");
-                }
-            }
-        };
 
         BtnSend = findViewById(R.id.SendButton);
         BtnSend.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +55,9 @@ public class forgot_password extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
+                    EmailEmpty.setVisibility(View.GONE);
+                    EmailWrong.setVisibility(View.GONE);
+                    EmailNotExist.setVisibility(View.GONE);
 
                     Intent i = new Intent(forgot_password.this, reset_password.class);
                     i.putExtra("email", email);
@@ -82,14 +67,16 @@ public class forgot_password extends AppCompatActivity {
                     TransitionManager.beginDelayedTransition(Container);
                     EmailEmpty.setVisibility(View.VISIBLE);
                     EmailWrong.setVisibility(View.GONE);
+                    EmailNotExist.setVisibility(View.GONE);
                 } else if (!isEmailValid(EditEmailTxt.getText().toString().trim())) {
                     TransitionManager.beginDelayedTransition(Container);
                     EmailEmpty.setVisibility(View.GONE);
                     EmailWrong.setVisibility(View.VISIBLE);
+                    EmailNotExist.setVisibility(View.GONE);
                 } else {
                     EmailEmpty.setVisibility(View.GONE);
                     EmailWrong.setVisibility(View.GONE);
-
+                    EmailNotExist.setVisibility(View.VISIBLE);
                 }
             }
 
