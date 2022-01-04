@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_1"
+    android:orientation="horizontal"
+    tools:context=".checkout_done">
+
+
+    <Button
+        android:id="@+id/proceedLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/light_blue_1"
+        android:text="Proceed!"
+        android:background="@drawable/hw_store_button"
+        android:fontFamily="@font/heavyheap"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="125dp"
+        android:id="@+id/textViewDeliveryFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delivery Fee :"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/proceedLocationButton"
+        app:layout_constraintBottom_toTopOf="@id/textViewRange"
+
+        android:textColor="@color/red"
+        android:fontFamily="@font/montserrat_semi_bold"/>
+    <TextView
+        android:id="@+id/textViewRange"
+        android:layout_marginHorizontal="125dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Range :"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDeliveryFee"
+        app:layout_constraintBottom_toTopOf="@id/map"
+        android:textColor="@color/red"
+        android:fontFamily="@font/montserrat_semi_bold"/>
+    <TextView
+        android:id="@+id/tCostFee"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/textViewDeliveryFee"
+        app:layout_constraintTop_toBottomOf="@id/proceedLocationButton"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/red"
+        android:text="example"/>
+    <TextView
+        android:id="@+id/tRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/textViewRange"
+        app:layout_constraintTop_toBottomOf="@id/tCostFee"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textColor="@color/red"
+        android:text="example"/>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="15dp"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="630dp"
+    tools:context=".MapsActivity"
+    map:layout_constraintRight_toRightOf="parent"
+    map:layout_constraintLeft_toLeftOf="parent"
+
+    map:layout_constraintTop_toBottomOf="@id/textViewRange"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
