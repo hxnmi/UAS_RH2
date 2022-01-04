@@ -12,7 +12,7 @@
         android:id="@+id/BackgroundHotWheels"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.8"
+        android:alpha="0.7"
         android:scaleType="fitXY"
         android:src="@drawable/background_hotwheels2"
         app:layout_constraintStart_toStartOf="parent"
@@ -165,102 +165,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/EditConfirmPassword" />
 
-    <TextView
-        android:id="@+id/NameEmpty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Fill Your Name To Create"
-        android:textColor="@color/red"
-        android:textSize="15sp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
 
-    <TextView
-        android:id="@+id/EmailEmpty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Email Must Be Filled!"
-        android:textColor="@color/red"
-        android:textSize="15sp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
-
-    <TextView
-        android:id="@+id/PasswordEmpty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Create Your Password!"
-        android:textColor="@color/red"
-        android:textSize="15sp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
-
-    <TextView
-        android:id="@+id/ConfirmPasswordEmpty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Confirm Your Password!"
-        android:textColor="@color/red"
-        android:textSize="15sp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
-
-    <TextView
-        android:id="@+id/WrongEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Email That You Entered is Incorrect!"
-        android:textColor="@color/red"
-        android:textSize="15sp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
-
-    <TextView
-        android:id="@+id/PasswordnotMatch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Password and Confirm Password Doesn't Match!"
-        android:textColor="@color/red"
-        android:textSize="15sp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
-
-    <TextView
-        android:id="@+id/PhoneEmpty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Please Enter Your Number!"
-        android:textColor="@color/red"
-        android:textSize="15sp"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SignupButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

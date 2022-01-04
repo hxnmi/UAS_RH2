@@ -1,4 +1,4 @@
-package com.example.a43ug_a11202012434_michaelindrawan_utsppb;
+package com.example.a43ug_12421_12418_12434_12546;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,9 +25,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class log_in extends AppCompatActivity {
     ViewGroup Container;
-    TextView WrongEmail;
-    TextView EmailandPasswordEmpty;
-    TextView EmailPasswordNotExist;
     EditText EditEmail;
     EditText EditPassword;
     Button BtnLogin;
@@ -41,9 +38,6 @@ public class log_in extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         fAuth = FirebaseAuth.getInstance();
-        WrongEmail = findViewById(R.id.WrongEmail);
-        EmailandPasswordEmpty = findViewById(R.id.EmailPasswordisEmpty);
-        EmailPasswordNotExist = findViewById(R.id.EmailPasswordNotExist);
         EditEmail = findViewById(R.id.EditEmail);
         EditPassword = findViewById(R.id.EditPassword);
         Container = findViewById(R.id.Container);
@@ -70,21 +64,15 @@ public class log_in extends AppCompatActivity {
     public void signIn(final String email, String password){
      if((TextUtils.isEmpty(EditEmail.getText().toString().trim()))||(TextUtils.isEmpty(EditPassword.getText().toString().trim()))){
          TransitionManager.beginDelayedTransition(Container);
-         EmailandPasswordEmpty.setVisibility(View.VISIBLE);
-         WrongEmail.setVisibility(View.GONE);
-         EmailPasswordNotExist.setVisibility(View.GONE);
+         Toast.makeText(log_in.this, "Email and Password can't be empty!", Toast.LENGTH_SHORT).show();
 
      }
      else
          if(!isValidEmail(EditEmail.getText().toString().trim())){
              TransitionManager.beginDelayedTransition(Container);
-             EmailandPasswordEmpty.setVisibility(View.GONE);
-             EmailPasswordNotExist.setVisibility(View.GONE);
-             WrongEmail.setVisibility(View.VISIBLE);
+             Toast.makeText(log_in.this, "Your Email is Incorrect!", Toast.LENGTH_SHORT).show();
          }
          else{
-             EmailandPasswordEmpty.setVisibility(View.GONE);
-             WrongEmail.setVisibility(View.GONE);
              DatabaseReference reff = FirebaseDatabase.getInstance().getReference().child("User");
              Query query = reff.orderByChild("email").equalTo(email);
              query.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -103,7 +91,7 @@ public class log_in extends AppCompatActivity {
                              }
                          }
                      } else {
-                         EmailPasswordNotExist.setVisibility(View.VISIBLE);
+                         Toast.makeText(log_in.this, "Email and Password does not Exist!", Toast.LENGTH_SHORT).show();
                      }
 
                  }

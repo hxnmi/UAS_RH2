@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/EditEmail"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="220dp"
         android:fontFamily="@font/heavyheap"
-        android:layout_marginBottom="200dp"
         android:shadowColor="@color/black"
         android:shadowRadius="3.0"
         android:text="RETAIL's HUB"
@@ -104,42 +104,5 @@
         android:text="@string/SignUp"
         android:textColor="@color/white"
         android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/EmailPasswordisEmpty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/LoginButton"
-        android:text="Email and Password Must Be Filled!"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10sp"
-        android:textSize="15sp"
-        android:textColor="@color/red"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:visibility="gone"/>
-    <TextView
-        android:id="@+id/WrongEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/LoginButton"
-        android:text="Email that you entered is incorrect!"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10sp"
-        android:textSize="15sp"
-        android:textColor="@color/red"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:visibility="gone"/>
-    <TextView
-        android:id="@+id/EmailPasswordNotExist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/LoginButton"
-        android:text="Email and Password is Not Exist!"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10sp"
-        android:textSize="15sp"
-        android:textColor="@color/red"
-        android:fontFamily="@font/montserrat_semi_bold"
-        android:visibility="gone"/>
 
 </RelativeLayout>

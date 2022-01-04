@@ -55,7 +55,7 @@
         android:background="@drawable/hw_store_button"
         android:fontFamily="@font/heavyheap"
         android:text="info"
-        android:textColor="@color/light_blue_1"
+        android:textColor="@color/white"
         android:textSize="24sp" />
 
     <EditText

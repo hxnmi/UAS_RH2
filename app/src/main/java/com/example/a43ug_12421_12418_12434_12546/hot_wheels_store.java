@@ -1,14 +1,12 @@
-package com.example.a43ug_a11202012434_michaelindrawan_utsppb;
+package com.example.a43ug_12421_12418_12434_12546;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 

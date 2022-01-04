@@ -1,4 +1,4 @@
-package com.example.a43ug_a11202012434_michaelindrawan_utsppb;
+package com.example.a43ug_12421_12418_12434_12546;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,13 +30,6 @@ import java.util.Objects;
 
 public class sign_up extends AppCompatActivity {
     ViewGroup Container;
-    TextView WrongEmail;
-    TextView PasswordnotMatch;
-    TextView NameEmpty;
-    TextView EmailEmpty;
-    TextView PasswordEmpty;
-    TextView ConfirmPasswordEmpty;
-    TextView PhoneEmpty;
     EditText EditFirstName;
     EditText EditLastName;
     EditText EditEmail;
@@ -56,13 +49,6 @@ public class sign_up extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        WrongEmail = findViewById(R.id.WrongEmail);
-        PasswordnotMatch = findViewById(R.id.PasswordnotMatch);
-        NameEmpty = findViewById(R.id.NameEmpty);
-        EmailEmpty = findViewById(R.id.EmailEmpty);
-        PasswordEmpty = findViewById(R.id.PasswordEmpty);
-        ConfirmPasswordEmpty = findViewById(R.id.ConfirmPasswordEmpty);
-        PhoneEmpty = findViewById(R.id.PhoneEmpty);
         EditFirstName = findViewById(R.id.EditFirstName);
         EditLastName = findViewById(R.id.EditLastName);
         EditConfirmPassword = findViewById(R.id.EditConfirmPassword);
@@ -100,83 +86,38 @@ public class sign_up extends AppCompatActivity {
     public void signUp(final String email, String password){
         if((TextUtils.isEmpty(EditFirstName.getText().toString().trim()))||(TextUtils.isEmpty(EditLastName.getText().toString().trim()))){
             TransitionManager.beginDelayedTransition(Container);
-            NameEmpty.setVisibility(View.VISIBLE);
-            EmailEmpty.setVisibility(View.GONE);
-            PasswordEmpty.setVisibility(View.GONE);
-            ConfirmPasswordEmpty.setVisibility(View.GONE);
-            WrongEmail.setVisibility(View.GONE);
-            PasswordnotMatch.setVisibility(View.GONE);
-
+            Toast.makeText(sign_up.this, "Name can't be empty!", Toast.LENGTH_SHORT).show();
         }else
         if(TextUtils.isEmpty(EditEmail.getText().toString().trim())){
             TransitionManager.beginDelayedTransition(Container);
-            NameEmpty.setVisibility(View.GONE);
-            EmailEmpty.setVisibility(View.VISIBLE);
-            PasswordEmpty.setVisibility(View.GONE);
-            ConfirmPasswordEmpty.setVisibility(View.GONE);
-            WrongEmail.setVisibility(View.GONE);
-            PasswordnotMatch.setVisibility(View.GONE);
+            Toast.makeText(sign_up.this, "Email can't be empty!", Toast.LENGTH_SHORT).show();
         }
         else
         if(!isValidEmail(EditEmail.getText().toString().trim())){
             TransitionManager.beginDelayedTransition(Container);
-            NameEmpty.setVisibility(View.GONE);
-            EmailEmpty.setVisibility(View.GONE);
-            PasswordEmpty.setVisibility(View.GONE);
-            ConfirmPasswordEmpty.setVisibility(View.GONE);
-            WrongEmail.setVisibility(View.VISIBLE);
-            PasswordnotMatch.setVisibility(View.GONE);
+            Toast.makeText(sign_up.this, "Your email is Incorrect!", Toast.LENGTH_SHORT).show();
         }
         else
         if(TextUtils.isEmpty(EditPassword.getText().toString().trim())){
             TransitionManager.beginDelayedTransition(Container);
-            NameEmpty.setVisibility(View.GONE);
-            EmailEmpty.setVisibility(View.GONE);
-            PasswordEmpty.setVisibility(View.VISIBLE);
-            ConfirmPasswordEmpty.setVisibility(View.GONE);
-            WrongEmail.setVisibility(View.GONE);
-            PasswordnotMatch.setVisibility(View.GONE);
+            Toast.makeText(sign_up.this, "Your Password can't be empty!", Toast.LENGTH_SHORT).show();
         }
         else
         if(TextUtils.isEmpty(EditConfirmPassword.getText().toString().trim())){
             TransitionManager.beginDelayedTransition(Container);
-            NameEmpty.setVisibility(View.GONE);
-            EmailEmpty.setVisibility(View.GONE);
-            PasswordEmpty.setVisibility(View.GONE);
-            ConfirmPasswordEmpty.setVisibility(View.VISIBLE);
-            WrongEmail.setVisibility(View.GONE);
-            PasswordnotMatch.setVisibility(View.GONE);
+            Toast.makeText(sign_up.this, "Confirm Password can't be empty!", Toast.LENGTH_SHORT).show();
         }
         else
         if(!EditPassword.getText().toString().trim().equals(EditConfirmPassword.getText().toString().trim())){
             TransitionManager.beginDelayedTransition(Container);
-            NameEmpty.setVisibility(View.GONE);
-            EmailEmpty.setVisibility(View.GONE);
-            PasswordEmpty.setVisibility(View.GONE);
-            ConfirmPasswordEmpty.setVisibility(View.GONE);
-            WrongEmail.setVisibility(View.GONE);
-            PasswordnotMatch.setVisibility(View.VISIBLE);
+            Toast.makeText(sign_up.this, "Your Password does not match!", Toast.LENGTH_SHORT).show();
         }
         else
         if(TextUtils.isEmpty(EditPhone.getText().toString().trim())){
             TransitionManager.beginDelayedTransition(Container);
-            NameEmpty.setVisibility(View.GONE);
-            EmailEmpty.setVisibility(View.GONE);
-            PasswordEmpty.setVisibility(View.GONE);
-            ConfirmPasswordEmpty.setVisibility(View.GONE);
-            WrongEmail.setVisibility(View.GONE);
-            PasswordnotMatch.setVisibility(View.GONE);
-            PhoneEmpty.setVisibility(View.VISIBLE);
+            Toast.makeText(sign_up.this, "Phone can't be empty!", Toast.LENGTH_SHORT).show();
         }
         else{
-            NameEmpty.setVisibility(View.GONE);
-            EmailEmpty.setVisibility(View.GONE);
-            PasswordEmpty.setVisibility(View.GONE);
-            ConfirmPasswordEmpty.setVisibility(View.GONE);
-            WrongEmail.setVisibility(View.GONE);
-            PasswordnotMatch.setVisibility(View.GONE);
-            PhoneEmpty.setVisibility(View.GONE);
-
             fAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override

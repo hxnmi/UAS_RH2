@@ -1,4 +1,4 @@
-package com.example.a43ug_a11202012434_michaelindrawan_utsppb;
+package com.example.a43ug_12421_12418_12434_12546;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +13,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,11 +27,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class forgot_password extends AppCompatActivity {
     EditText EditEmailTxt;
-    TextView EmailWrong;
-    TextView EmailEmpty;
-    TextView EmailNotExist;
     ViewGroup Container;
     Button BtnSend;
+    FirebaseAuth fAuth;
 
 
     @Override
@@ -35,10 +37,8 @@ public class forgot_password extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
         EditEmailTxt = findViewById(R.id.EditEmail);
-        EmailEmpty = findViewById(R.id.EmailEmpty);
-        EmailWrong = findViewById(R.id.EmailWrong);
-        EmailNotExist = findViewById(R.id.EmailNotExist);
         Container = findViewById(R.id.Container);
+        fAuth = FirebaseAuth.getInstance();
 
         BtnSend = findViewById(R.id.SendButton);
         BtnSend.setOnClickListener(new View.OnClickListener() {
@@ -50,33 +50,25 @@ public class forgot_password extends AppCompatActivity {
     }
     public void sendButton(final String email){
 
+        fAuth.sendPasswordResetEmail(email);
         Query reff = FirebaseDatabase.getInstance().getReference().child("User").orderByChild("email").equalTo(email);
         reff.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    EmailEmpty.setVisibility(View.GONE);
-                    EmailWrong.setVisibility(View.GONE);
-                    EmailNotExist.setVisibility(View.GONE);
-
+                    Toast.makeText(forgot_password.this, "Enter verification code sent to your email", Toast.LENGTH_LONG).show();
                     Intent i = new Intent(forgot_password.this, reset_password.class);
                     i.putExtra("email", email);
                     startActivity(i);
                     finish();
                 } else if (TextUtils.isEmpty(EditEmailTxt.getText().toString().trim())) {
                     TransitionManager.beginDelayedTransition(Container);
-                    EmailEmpty.setVisibility(View.VISIBLE);
-                    EmailWrong.setVisibility(View.GONE);
-                    EmailNotExist.setVisibility(View.GONE);
+                    Toast.makeText(forgot_password.this, "Email can't be empty!", Toast.LENGTH_SHORT).show();
                 } else if (!isEmailValid(EditEmailTxt.getText().toString().trim())) {
                     TransitionManager.beginDelayedTransition(Container);
-                    EmailEmpty.setVisibility(View.GONE);
-                    EmailWrong.setVisibility(View.VISIBLE);
-                    EmailNotExist.setVisibility(View.GONE);
+                    Toast.makeText(forgot_password.this, "Your email is Incorrect!", Toast.LENGTH_SHORT).show();
                 } else {
-                    EmailEmpty.setVisibility(View.GONE);
-                    EmailWrong.setVisibility(View.GONE);
-                    EmailNotExist.setVisibility(View.VISIBLE);
+                    Toast.makeText(forgot_password.this, "Your email does not Exist!", Toast.LENGTH_SHORT).show();
                 }
             }
 

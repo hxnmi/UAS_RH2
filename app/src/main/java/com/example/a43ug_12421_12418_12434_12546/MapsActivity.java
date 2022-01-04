@@ -1,4 +1,4 @@
-package com.example.a43ug_a11202012434_michaelindrawan_utsppb;
+package com.example.a43ug_12421_12418_12434_12546;
 
 import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
@@ -26,11 +26,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.a43ug_a11202012434_michaelindrawan_utsppb.databinding.ActivityMapsBinding;
+import com.example.a43ug_12421_12418_12434_12546.databinding.ActivityMapsBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.text.DecimalFormat;

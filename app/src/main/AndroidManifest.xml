@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.a43ug_a11202012434_michaelindrawan_utsppb">
+    package="com.example.a43ug_12421_12418_12434_12546">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -20,7 +20,7 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.43UG_A11202012434_MICHAELINDRAWAN_UTSPPB"
+        android:theme="@style/Theme.43UG_12421_12418_12434_12546"
         android:usesCleartextTraffic="true">
 
         <!--
@@ -36,7 +36,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.example.a43ug_12421_12418_12434_12546.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <!--
@@ -52,58 +52,58 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".sign_up"
+            android:name="com.example.a43ug_12421_12418_12434_12546.sign_up"
             android:exported="false" />
         <activity
-            android:name=".about_dev_tito"
+            android:name="com.example.a43ug_12421_12418_12434_12546.about_dev_tito"
             android:exported="false" />
         <activity
-            android:name=".about_dev_michael"
+            android:name="com.example.a43ug_12421_12418_12434_12546.about_dev_michael"
             android:exported="false" />
         <activity
-            android:name=".about_dev_hanif"
+            android:name="com.example.a43ug_12421_12418_12434_12546.about_dev_hanif"
             android:exported="false" />
         <activity
-            android:name=".about_dev_fandy"
+            android:name="com.example.a43ug_12421_12418_12434_12546.about_dev_fandy"
             android:exported="false" />
         <activity
-            android:name=".Info"
+            android:name="com.example.a43ug_12421_12418_12434_12546.Info"
             android:exported="true" />
         <activity
-            android:name=".about_dev_main"
+            android:name="com.example.a43ug_12421_12418_12434_12546.about_dev_main"
             android:exported="false" />
         <activity
-            android:name=".checkout_done"
+            android:name="com.example.a43ug_12421_12418_12434_12546.checkout_done"
             android:exported="false" />
         <activity
-            android:name=".checkout_form"
+            android:name="com.example.a43ug_12421_12418_12434_12546.checkout_form"
             android:exported="false" />
         <activity
-            android:name=".hot_wheels_store"
+            android:name="com.example.a43ug_12421_12418_12434_12546.hot_wheels_store"
             android:exported="true" />
         <activity
-            android:name=".tables"
+            android:name="com.example.a43ug_12421_12418_12434_12546.tables"
             android:exported="true" />
         <activity
-            android:name=".main_menu"
+            android:name="com.example.a43ug_12421_12418_12434_12546.main_menu"
             android:exported="true" />
         <activity
-            android:name=".successful_reseting_password"
+            android:name="com.example.a43ug_12421_12418_12434_12546.successful_reseting_password"
             android:exported="true" />
         <activity
-            android:name=".reset_password"
+            android:name="com.example.a43ug_12421_12418_12434_12546.reset_password"
             android:exported="true" />
         <activity
-            android:name=".forgot_password"
+            android:name="com.example.a43ug_12421_12418_12434_12546.forgot_password"
             android:exported="true" />
         <activity
-            android:name=".log_in"
+            android:name="com.example.a43ug_12421_12418_12434_12546.log_in"
             android:exported="true" />
         <activity
-            android:name=".get_started"
+            android:name="com.example.a43ug_12421_12418_12434_12546.get_started"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.a43ug_12421_12418_12434_12546.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
