@@ -39,7 +39,7 @@
 
     <EditText
         android:id="@+id/EditFirstName"
-        android:layout_width="160dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40sp"
         android:width="300dp"
@@ -55,10 +55,10 @@
 
     <EditText
         android:id="@+id/EditLastName"
-        android:layout_width="160dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:width="300dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="28dp"
         android:background="@drawable/edit_text"
         android:fontFamily="@font/montserrat_semi_bold"
         android:hint="Last name"
