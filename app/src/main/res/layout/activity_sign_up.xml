@@ -156,7 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30sp"
-        android:background="@drawable/light_blue_2_button"
+        android:background="@drawable/yellow_button"
         android:fontFamily="@font/heavyheap"
         android:paddingHorizontal="30sp"
         android:text="SIGN UP!"

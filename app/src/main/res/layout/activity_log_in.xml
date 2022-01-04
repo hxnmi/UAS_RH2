@@ -22,10 +22,10 @@
         android:layout_above="@+id/EditEmail"
         android:layout_centerInParent="true"
         android:fontFamily="@font/heavyheap"
-        android:paddingBottom="25sp"
+        android:layout_marginBottom="200dp"
         android:shadowColor="@color/black"
         android:shadowRadius="3.0"
-        android:text="HOTWHEELS\nRETAIL's HUB"
+        android:text="RETAIL's HUB"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="65sp" />
@@ -70,11 +70,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/EditPassword"
         android:layout_centerInParent="true"
-        android:background="@drawable/light_blue_2_button"
+        android:background="@drawable/yellow_button"
         android:fontFamily="@font/heavyheap"
         android:paddingHorizontal="30sp"
         android:text="LOG IN!"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
         android:textSize="35sp" />
 
     <TextView
@@ -101,6 +101,7 @@
         android:layout_marginRight="20sp"
         android:fontFamily="@font/montserrat_semi_bold"
         android:onClick="signup"
+        android:backgroundTint="@null"
         android:text="@string/SignUp"
         android:textColor="@color/white"
         android:textSize="18sp" />
