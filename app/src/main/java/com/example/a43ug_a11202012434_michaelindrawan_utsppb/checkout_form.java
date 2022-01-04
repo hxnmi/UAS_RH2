@@ -31,12 +31,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Locale;
 
 public class checkout_form extends AppCompatActivity {
 
-    String tPrice, alamat;
+    String tPrice, yourLoc, subtractionFee;
     TextView totalPrice;
     EditText editAddress;
     Button toCheckOutDone, yourDest;
@@ -51,7 +52,6 @@ public class checkout_form extends AppCompatActivity {
         totalPrice = (TextView) findViewById(R.id.totalPrice);
         editAddress = findViewById(R.id.editAddress);
         toCheckOutDone = findViewById(R.id.buttonToCheckOutDone);
-        yourDest = findViewById(R.id.yourDest);
         this.passed = false;
         radioButton = (RadioGroup) findViewById(R.id.radioGroup1);
         Container = findViewById(R.id.Container);
@@ -87,32 +87,21 @@ public class checkout_form extends AppCompatActivity {
                 }
             }
         });
-        yourDest.setOnClickListener(new View.OnClickListener() {
+        editAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getApplicationContext());
-
-                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                    fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Location> task) {
-                            Location location = task.getResult();
-                            if (location!=null){
-                                Geocoder geocoder = new Geocoder(checkout_form.this, Locale.getDefault());
-
-                                try {
-                                    List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                                    editAddress.setText((addresses.get(0).getAddressLine(0)).toString().trim());
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }
-                    });
+                Intent i = new Intent(checkout_form.this, MapsActivity.class);
+                if(!TextUtils.isEmpty(editAddress.getText().toString().trim())){
+                    subtractionFee = getIntent().getStringExtra("subtractionFee");
+                    double tPricePostSub = (double) (Double.parseDouble(tPrice.trim())-Double.parseDouble(subtractionFee.trim()));
+                    i.putExtra("tPrice", tPricePostSub);
+                    startActivity(i);
                 }
                 else {
-                    Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_SHORT).show();
+                    i.putExtra("tPrice", tPrice);
+                    startActivity(i);
                 }
+
 
             }
         });
@@ -126,9 +115,14 @@ public class checkout_form extends AppCompatActivity {
         if(getIntent().hasExtra("tPrice")){
             tPrice = getIntent().getStringExtra("tPrice");
         }
+        if(getIntent().hasExtra("yourLoc")){
+            yourLoc = getIntent().getStringExtra("yourLoc");
+        }
+
     }
 
     public void setData(){
         totalPrice.setText("$ "+tPrice);
+        editAddress.setText(yourLoc);
     }
 }
