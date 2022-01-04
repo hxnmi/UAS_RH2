@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:textColor="@color/light_blue_1"
+        android:textColor="@color/white"
         android:text="Proceed!"
         android:background="@drawable/hw_store_button"
         android:fontFamily="@font/heavyheap"

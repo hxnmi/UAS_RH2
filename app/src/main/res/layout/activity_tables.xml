@@ -15,7 +15,7 @@
                 android:text="Tips for Collectors"
                 android:paddingHorizontal="20dp"
                 android:fontFamily="@font/heavyheap"
-                android:textColor="@color/light_blue_1"
+                android:textColor="@color/light_blue_3"
                 android:background="@drawable/main_menu_option_bar_1"
                 android:textSize="30sp"
                 android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             android:text="Nah, ini lah tips pertama yang harus Anda lakukan ketika akan membeli Hotwheels. Sebelum membawa pulang mobil mainan untuk Anda atau buah hati, pastikan Anda memilih merek asli bukan Hotwheels yang palsu. Untuk itu, Anda harus sangat teliti dalam melihat logo dan tulisan merek yang tertera pada bungkus atau kardus Hotwheels. Tentunya Anda tidak ingin tertipu oleh merek yang palsu bukan?"
             android:justificationMode="inter_word"
             android:paddingHorizontal="10dp"
-            android:textSize="14sp" />
+            android:textSize="13sp" />
 
 
     </TableRow>

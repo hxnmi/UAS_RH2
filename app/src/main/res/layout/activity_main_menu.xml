@@ -16,7 +16,8 @@
         android:textAlignment="center"
         android:textSize="65sp"
         android:layout_above="@+id/EditEmail"
-        android:shadowColor="@color/red2"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20.0"
         android:fontFamily="@font/heavyheap"
         android:textColor="@color/red"
         android:paddingBottom="25sp"
@@ -45,7 +46,7 @@
         android:fontFamily="@font/heavyheap"
         android:gravity="center"
         android:text="Tips for Collectors"
-        android:textColor="@color/light_blue_1"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:onClick="toTables"/>
     <Button
@@ -57,7 +58,7 @@
         android:fontFamily="@font/heavyheap"
         android:gravity="center"
         android:text="About Dev"
-        android:textColor="@color/light_blue_1"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:onClick="toAbout"/>
 

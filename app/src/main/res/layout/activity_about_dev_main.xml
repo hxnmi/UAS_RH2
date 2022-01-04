@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/heavyheap"
-                android:shadowColor="@color/red2"
+                android:shadowColor="@color/black"
                 android:shadowRadius="20"
                 android:text="ABOUT DEV"
                 android:textColor="@color/red"
@@ -41,7 +41,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:text="HotWheels Retail's Hub Developer Profil"
                 android:textColor="@color/red"
-                android:shadowColor="@color/red2"
+                android:shadowColor="@color/black"
                 android:shadowRadius="20"
                 android:textSize="20sp" />
         </RelativeLayout>
