@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:alpha="0.5"
         android:scaleType="fitXY"
-        android:src="@drawable/background_hotwheels"
+        android:src="@drawable/background_hotwheels2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

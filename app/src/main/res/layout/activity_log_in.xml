@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue_1"
     android:id="@+id/Container"
     android:orientation="vertical"
     tools:context=".log_in">
@@ -13,9 +12,9 @@
         android:id="@+id/BackgroundHotWheels"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.5"
+        android:alpha="0.8"
         android:scaleType="fitXY"
-        android:src="@drawable/background_hotwheels" />
+        android:src="@drawable/background_hotwheels2" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,11 +23,11 @@
         android:layout_centerInParent="true"
         android:fontFamily="@font/heavyheap"
         android:paddingBottom="25sp"
-        android:shadowColor="@color/light_blue_3"
-        android:shadowRadius="75"
+        android:shadowColor="@color/black"
+        android:shadowRadius="3.0"
         android:text="HOTWHEELS\nRETAIL's HUB"
         android:textAlignment="center"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
         android:textSize="65sp" />
 
     <EditText
@@ -89,7 +88,7 @@
         android:fontFamily="@font/montserrat_semi_bold"
         android:onClick="forgotPassword"
         android:text="@string/ForgotPassword"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
     <TextView
@@ -103,7 +102,7 @@
         android:fontFamily="@font/montserrat_semi_bold"
         android:onClick="signup"
         android:text="@string/SignUp"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
     <TextView
