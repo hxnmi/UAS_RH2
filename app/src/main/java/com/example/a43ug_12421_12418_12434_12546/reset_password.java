@@ -94,9 +94,9 @@ public class reset_password extends AppCompatActivity {
             TransitionManager.beginDelayedTransition(Container);
             Toast.makeText(reset_password.this, "Code must be 6 digits!", Toast.LENGTH_SHORT).show();
         }
-        else if (Edit6DigitsCode.getText().toString().trim() != "696969") {
+        else if ((!Edit6DigitsCode.getText().toString().trim().equals("696969"))) {
             TransitionManager.beginDelayedTransition(Container);
-            Toast.makeText(reset_password.this, "The entered code is incorrect.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(reset_password.this, "The entered code is incorrect."+Edit6DigitsCode, Toast.LENGTH_SHORT).show();
         }
         else{
             String email = getIntent().getStringExtra("email");
